@@ -11,3 +11,5 @@ my blog
 2.新增static 静态文件夹用以存放原型图及其他静态资源
 
 测试mac 提交git
+测试chromeos 提交git
+
