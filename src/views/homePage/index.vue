@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div class="content">
-        
+        <WangEditor/>
       </div>
     </div>
   </div>
@@ -26,15 +26,18 @@
 
 <script lang="ts">
 import picture from '@/assets/images/picture.png';
+import WangEditor from './componets/wangEditor.vue';
 // import getAssetsFile from '@/utils/public-use';
 export default{
-  name: 'homePage',
+    name: 'homePage',
     props: {
 
     },
+    components: { WangEditor},
     setup(props, context) {
       return {
-        picture
+        picture,
+        WangEditor
       };
     },
 }
@@ -44,6 +47,7 @@ export default{
 <style lang="less" scoped>
 .container {
     display:flex;
+    overflow: hidden;
     height:100%;
     width:100%;
     background-image: url("@/assets/images/background.jpeg");
@@ -70,10 +74,11 @@ export default{
     .right{
         width:calc(100% - 300px);
         height:100%;
+        padding:20px;
         .header{
           height: 50px;
           width: 100%;
-          margin: 100px 0 0 20px;
+          margin: 100px 0 0 0px;
           display: flex;
           align-items: center;
           justify-content: flex-start;
@@ -94,6 +99,7 @@ export default{
         .content{
             height:calc(100% - 200px);
             width:100%;
+            // margin:0 20px;
         }
     }
 }
